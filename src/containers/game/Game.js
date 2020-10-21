@@ -14,6 +14,14 @@ const Game = (props) => {
     const {board} = props;
     const colors = Colors;
 
+    const handleClick = (event) => {
+        const elementId = event.target.id;
+        let coordinates = elementId.split('-').slice(1, 3);
+        coordinates = [parseInt(coordinates[0], 10), parseInt(coordinates[1], 10)];
+        //props.updateBoard(board, coordinates);
+        console.log(coordinates);
+    }
+
     return (
         <div className="game-board">
             {board && board.map((column, index) => (
@@ -29,6 +37,7 @@ const Game = (props) => {
                             index={index}
                             row={row}
                             colors={colors}
+                            handleClick={handleClick}
                         />
                     )})}
                 </Column>
@@ -48,7 +57,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         setBoard: () => dispatch(setBoard()),
-        updateBoard: currentBoard => dispatch(updateBoard(currentBoard))
+        updateBoard: (currentBoard, blockCoordinates) => dispatch(updateBoard(currentBoard, blockCoordinates))
     }
 }
 
