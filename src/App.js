@@ -1,6 +1,6 @@
 import React from 'react';
 import Game from './containers';
-import {Header} from './components';
+import {Header, Footer} from './components';
 import './App.css';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Game />
+      <Footer />
     </div>
   );
 }
