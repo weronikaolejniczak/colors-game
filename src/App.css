@@ -6,12 +6,12 @@
 }
 
 a {
-    color: #8debb1;
+    color: #685bca;
     text-decoration: none;
     font-weight: bold;
     transition: ease-in-out 0.3s;
 }
 
 a:hover {
-    color: #17de36;
+    color: #8b81d7;
 }
