@@ -8,7 +8,7 @@
     background-color: #111111;
 }
 
-.footer .copyright {
+.footer .copyright, .footer .repository  {
     padding-left: 25px;
     padding-right: 25px;
     font-size: 12px;
