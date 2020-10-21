@@ -20,3 +20,10 @@
 .block:hover {
     border: #fff 1px solid;
 }
+
+@media only screen and (max-width: 625px) {
+    .block {
+        width: 7vw;
+        height: 7vw;
+    }
+}
