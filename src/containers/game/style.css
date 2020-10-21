@@ -1,3 +1,11 @@
+.game {
+    height: calc(100vh - 80px - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .column {
     display: flex;
 }
@@ -6,4 +14,9 @@
     border: #333 1px dotted;
     width: 50px;
     height: 50px;
+    cursor: pointer;
+}
+
+.block:hover {
+    border: #fff 1px solid;
 }

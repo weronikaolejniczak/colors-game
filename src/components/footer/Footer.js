@@ -1,9 +1,10 @@
 import React from 'react';
+import './style.css';
 
 const Footer = () => {
     return (
-        <footer>
-            <span>Made by Weronika Olejniczak</span>
+        <footer className="footer">
+            <span className="copyright">Made by Weronika Olejniczak</span>
         </footer>
     );
 }

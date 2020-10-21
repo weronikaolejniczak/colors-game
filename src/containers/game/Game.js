@@ -8,7 +8,7 @@ const Game = () => {
     const colors = Colors;
 
     return (
-        <div className="main">
+        <div className="game">
             {board && board.map((column, index) => (
                 <div
                     id={`col-${index}`}

@@ -1,9 +1,10 @@
 import React from 'react';
+import './style.css';
 
 const Header = () => {
     return (
         <header className="header">
-            <h2>Colors Game</h2>
+            <span className="logo">Colors Game</span>
         </header>
     );
 }
