@@ -1,7 +1,5 @@
+import {BOARD_X, BOARD_Y} from '../config';
 import {includesArray} from './includesArray';
-
-const BOARD_X = process.env.REACT_APP_BOARD_X;
-const BOARD_Y = process.env.REACT_APP_BOARD_Y;
 
 const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade) => {
     // add the current move to the moves made to avoid repetition

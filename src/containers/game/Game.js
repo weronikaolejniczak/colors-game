@@ -1,11 +1,12 @@
 import React from 'react';
-import BOARD from '../../data/DummyBoard';
+//import BOARD from '../../data/DummyBoard';
 import Colors from '../../data/Colors';
 import {Block, Column} from '../../components';
+import {initializeBoard} from '../../utilities/initializeBoard';
 import './style.css';
 
 const Game = () => {
-    const board = BOARD;
+    const board = initializeBoard();
     const colors = Colors;
 
     return (

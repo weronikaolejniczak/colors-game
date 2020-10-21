@@ -1,6 +1,4 @@
-const BOARD_X = process.env.REACT_APP_BOARD_X;
-const BOARD_Y = process.env.REACT_APP_BOARD_Y;
-const COLORS = process.env.REACT_APP_COLORS;
+import {BOARD_X, BOARD_Y, COLORS} from '../config';
 
 export const initializeBoard = () => {
     const board = [];
@@ -12,6 +10,6 @@ export const initializeBoard = () => {
             board[i].push(Math.floor(Math.random() * COLORS + 1));
         }
     }
-
+    console.log(board);
     return board;
 }
