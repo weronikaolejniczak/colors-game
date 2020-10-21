@@ -1,11 +1,10 @@
 import React from 'react';
 import './style.css';
 
-const Block = ({index, row, colors}) => {
+const Block = ({parentId, index, row, colors}) => {
     return (
         <div
-            id={`block-${index}`}
-            key={`block-${index}`}
+            id={`block-${parentId}-${index}`}
             className="block"
             style={{backgroundColor: `${colors[row]}`}}
         />

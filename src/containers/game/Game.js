@@ -17,14 +17,20 @@ const Game = (props) => {
     return (
         <div className="game-board">
             {board && board.map((column, index) => (
-                <Column index={index}>
-                    {column.map((row, index) => (
+                <Column
+                    key={`col-${index}`}
+                    index={index}
+                    >
+                    {column.map((row, index, arr) => {
+                        return (
                         <Block
+                            key={`block-${board.indexOf(arr)}-${index}`}
+                            parentId={board.indexOf(arr)}
                             index={index}
                             row={row}
                             colors={colors}
                         />
-                    ))}
+                    )})}
                 </Column>
             ))}
         </div>
