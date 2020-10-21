@@ -1,8 +1,9 @@
 import Block from './atoms/block';
+import ScoreBoard from './atoms/scoreBoard';
 
 import Column from './molecules/column';
 
 import Header from './organisms/header';
 import Footer from './organisms/footer';
 
-export {Block, Column, Header, Footer};
+export {Block, ScoreBoard, Column, Header, Footer};
