@@ -1,6 +1,7 @@
 import React from 'react';
 import BOARD from '../../data/DummyBoard';
 import Colors from '../../data/Colors';
+import {Block, Column} from '../../components';
 import './style.css';
 
 const Game = () => {
@@ -10,20 +11,15 @@ const Game = () => {
     return (
         <div className="game">
             {board && board.map((column, index) => (
-                <div
-                    id={`col-${index}`}
-                    key={`col-${index}`}
-                    className="column"
-                    >
+                <Column index={index}>
                     {column.map((row, index) => (
-                        <div
-                            id={`block-${index}`}
-                            key={`block-${index}`}
-                            className="block"
-                            style={{backgroundColor: `${colors[row]}`}}
+                        <Block
+                            index={index}
+                            row={row}
+                            colors={colors}
                         />
                     ))}
-                </div>
+                </Column>
             ))}
         </div>
     );
