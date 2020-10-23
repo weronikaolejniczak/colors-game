@@ -23,18 +23,18 @@ const Game = (props) => {
 
     return (
         <div className="game-board">
-            {board && board.map((column, index) => (
+            {board && board.map((row, index) => (
                 <Row
-                    key={`col-${index}`}
+                    key={`row-${index}`}
                     index={index}
                     >
-                    {column.map((row, index, arr) => {
+                    {row.map((cell, index, arr) => {
                         return (
                         <Block
                             key={`block-${board.indexOf(arr)}-${index}`}
                             parentId={board.indexOf(arr)}
                             index={index}
-                            row={row}
+                            cell={cell}
                             colors={colors}
                             handleClick={handleClick}
                         />
