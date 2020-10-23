@@ -3,6 +3,7 @@ import {Block, Row} from '../../';
 import './style.css';
 
 const GameBoard = ({board, colors, handleClick}) => {
+    console.log('Hi! Im rendered!');
     return (
         <div className="game-board">
             {board && board.map((row, index) => (

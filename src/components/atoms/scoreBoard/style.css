@@ -1,6 +1,7 @@
 .score-board {
     padding-left: 25px;
     padding-right: 25px;
+    font-size: 20px;
 }
 
 .score-board .score-title {
@@ -9,7 +10,4 @@
 
 .score-board .score-value {
     margin-left: 10px;
-    padding: 5px 10px;
-    border: #685bca 1px solid;
-    border-radius: 15px;
 }

@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Colors from '../../data/Colors';
 import {setBoard, updateBoard} from '../../redux';
 
-import {GameBoard} from '../../components';
+import {ScoreBoard, GameBoard} from '../../components';
 import './style.css';
 
 const Game = (props) => {
@@ -23,6 +23,7 @@ const Game = (props) => {
 
     return (
         <div className="game-container">
+            <ScoreBoard />
             <GameBoard board={board} colors={colors} handleClick={handleClick} />
         </div>
     );
