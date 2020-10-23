@@ -16,7 +16,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## To Do
 
 - Implement score.
-- Implement an animation for when the change on the game board occurs.
 - Implement board examiner so that a button for generating new board appears if there are no available moves on the board.
 - Display a message on the board if the user clicks on the block which does not have same-colored neighbors.
 - Let user choose the dimensions of the board (6 < y < 12, 6 < x < 20).
