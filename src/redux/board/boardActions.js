@@ -10,10 +10,6 @@ export const setBoard = () => {
     }
 }
 
-/**
- * TODO
- * complete updateBoard action
- */
 export const updateBoard = (currentBoard, blockCoordinates) => {
     //console.log('currentBoard', currentBoard);
     //console.log('blockCoordinates', blockCoordinates);
