@@ -4,6 +4,7 @@ import {startRound} from '../../utilities/startRound';
 
 export const setBoard = () => {
     const board = initializeBoard();
+
     return {
         type: SET_BOARD,
         payload: board
