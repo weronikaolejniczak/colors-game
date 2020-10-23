@@ -10,6 +10,6 @@ export const initializeBoard = () => {
             board[i].push(Math.floor(Math.random() * COLORS + 1));
         }
     }
-    console.log(board);
+    //console.log(board);
     return board;
 }

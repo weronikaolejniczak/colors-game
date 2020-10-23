@@ -16,6 +16,7 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
         if (!includesArray(correctMoves, [col, row + 1])) {
             correctMoves.push([col, row + 1]);
         }
+        console.log(!includesArray(movesMade, [col, row + 1]));
         // if the move to the block to the top hasn't been made yet, add it to moves to make
         if (!includesArray(movesMade, [col, row + 1])) {
             movesToMake.push([col, row + 1]);
@@ -27,6 +28,7 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
         if (!includesArray(correctMoves, [col, row - 1])) {
             correctMoves.push([col, row - 1]);
         }
+        console.log(!includesArray(movesMade, [col, row - 1]));
         // if the move to the block to the bottom hasn't been made yet, add it to moves to make
         if (!includesArray(movesMade, [col, row - 1])) {
             movesToMake.push([col, row - 1]);
@@ -38,6 +40,7 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
         if (!includesArray(correctMoves, [col + 1, row])) {
             correctMoves.push([col + 1, row]);
         }
+        console.log(!includesArray(movesMade, [col + 1, row]));
         // if the move to the block to the right hasn't been made yet, add it to moves to make
         if (!includesArray(movesMade, [col + 1, row])) {
             movesToMake.push([col + 1, row]);
@@ -49,6 +52,7 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
         if (!includesArray(correctMoves, [col - 1, row])) {
             correctMoves.push([col - 1, row]);
         }
+        console.log(!includesArray(movesMade, [col - 1, row]));
         // if the move to the block to the left hasn't been made yet, add it to moves to make
         if (!includesArray(movesMade, [col - 1, row])) {
             movesToMake.push([col - 1, row]);
