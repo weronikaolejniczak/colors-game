@@ -1,4 +1,4 @@
-import {BOARD_X, BOARD_Y} from '../config';
+import {BOARD_Y, BOARD_X} from '../config';
 import {includesArray} from './includesArray';
 
 const checkMove = (board, row, col, value, correctMoves, movesToMake, movesMade) => {
@@ -11,7 +11,7 @@ const checkMove = (board, row, col, value, correctMoves, movesToMake, movesMade)
     // add the current move to the moves made to avoid repetition
     movesMade.push([row, col]);
     // check block to the top
-    if (col < BOARD_Y - 1 && board[row][col + 1] === value) {
+    if (col < BOARD_X - 1 && board[row][col + 1] === value) {
         // if block to the top has the correct value and it's not already in correct moves, add it
         if (!includesArray(correctMoves, [row, col + 1])) {
             correctMoves.push([row, col + 1]);
@@ -35,7 +35,7 @@ const checkMove = (board, row, col, value, correctMoves, movesToMake, movesMade)
         }
     }
     // check block to the right
-    if (row < BOARD_X - 1 && board[row + 1][col] === value) {
+    if (row < BOARD_Y - 1 && board[row + 1][col] === value) {
         // if block to the right has the correct value and it's not already in correct moves, add it
         if (!includesArray(correctMoves, [row + 1, col])) {
             correctMoves.push([row + 1, col]);
