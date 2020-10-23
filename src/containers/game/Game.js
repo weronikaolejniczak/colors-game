@@ -21,8 +21,12 @@ const Game = (props) => {
         coordinates = [parseInt(coordinates[0], 10), parseInt(coordinates[1], 10)];
         // get blocks that are neighboring and of the same color using a utility for starting a round and checking the surroundings of the given block
         const blocks = checkNeighbors(board, coordinates[0], coordinates[1]);
+        // dispatch an action to update board
         props.updateBoard(board, blocks);
-        props.increaseScore(blocks.length);
+        if (blocks.length > 0) {
+            // dispatch an action to increase the score
+            props.increaseScore(blocks.length);
+        }
     }
 
     return (
