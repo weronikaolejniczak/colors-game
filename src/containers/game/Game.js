@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Colors from '../../data/Colors';
 import {setBoard, updateBoard} from '../../redux';
 
-import {Block, Column} from '../../components';
+import {Block, Row} from '../../components';
 import './style.css';
 
 const Game = (props) => {
@@ -24,7 +24,7 @@ const Game = (props) => {
     return (
         <div className="game-board">
             {board && board.map((column, index) => (
-                <Column
+                <Row
                     key={`col-${index}`}
                     index={index}
                     >
@@ -39,7 +39,7 @@ const Game = (props) => {
                             handleClick={handleClick}
                         />
                     )})}
-                </Column>
+                </Row>
             ))}
         </div>
     );
