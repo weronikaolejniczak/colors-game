@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.css';
 
-const ScoreBoard = () => {
+const ScoreBoard = ({score}) => {
     return (
         <div className="score-board">
-            <span className="score-title">Score:</span> <span className="score-value">0</span>
+            <span className="score-title">Score:</span> <span className="score-value">{score}</span>
         </div>
     );
 }
