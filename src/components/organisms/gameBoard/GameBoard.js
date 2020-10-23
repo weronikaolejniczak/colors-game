@@ -1,16 +1,16 @@
 import React from 'react';
-import {Block, Row} from '../../';
+import {Block, Column} from '../../';
 import './style.css';
 
 const GameBoard = ({board, colors, handleClick}) => {
     return (
         <div className="game-board">
-            {board && board.map((row, index) => (
-                <Row
-                    key={`row-${index}`}
+            {board && board.map((column, index) => (
+                <Column
+                    key={`col-${index}`}
                     index={index}
                     >
-                    {row.map((cell, index, arr) => {
+                    {column.map((cell, index, arr) => {
                         return (
                         <Block
                             key={`block-${board.indexOf(arr)}-${index}`}
@@ -21,7 +21,7 @@ const GameBoard = ({board, colors, handleClick}) => {
                             handleClick={handleClick}
                         />
                     )})}
-                </Row>
+                </Column>
             ))}
         </div>
     );
