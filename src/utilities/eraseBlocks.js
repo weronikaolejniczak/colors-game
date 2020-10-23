@@ -1,6 +1,6 @@
 import {BOARD_Y, COLORS} from '../config';
 
-export const eraseBlocks = (board, blocks) => {
+const eraseBlocks = (board, blocks) => {
     //console.log(BOARD);
     //console.log(BLOCKS);
     const tempBoard = board;
@@ -52,3 +52,5 @@ export const eraseBlocks = (board, blocks) => {
         return tempBoard;
     }
 }
+
+export default eraseBlocks;

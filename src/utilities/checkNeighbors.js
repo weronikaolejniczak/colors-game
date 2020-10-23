@@ -1,5 +1,5 @@
 import {BOARD_Y, BOARD_X} from '../config';
-import {includesArray} from './includesArray';
+import includesArray from './includesArray';
 
 const checkMove = (board, row, col, value, correctMoves, movesToMake, movesMade) => {
     /* console.log('\nNEXT MOVE!')
@@ -84,8 +84,10 @@ const checkMove = (board, row, col, value, correctMoves, movesToMake, movesMade)
     }
 }
 
-export const startRound = (board, y, x) => {
+const checkNeighbors = (board, y, x) => {
     const moves = checkMove(board, y, x, board[y][x], [[y, x]], [], []);
     //console.log('\nROUND SCORE:', moves.length);
     return moves;
 }
+
+export default checkNeighbors;

@@ -1,11 +1,5 @@
 import {SET_BOARD, UPDATE_BOARD} from './boardTypes';
-import {initializeBoard} from '../../utilities/initializeBoard';
-import {startRound} from '../../utilities/startRound';
-import {eraseBlocks} from '../../utilities/eraseBlocks';
-/**
- * TODO
- * possibly create an index.js in utilities for better imports
- */
+import {initializeBoard, checkNeighbors, eraseBlocks} from '../../utilities/';
 
 export const setBoard = () => {
     const board = initializeBoard();
@@ -24,7 +18,7 @@ export const updateBoard = (currentBoard, blockCoordinates) => {
     //console.log('currentBoard', currentBoard);
     //console.log('blockCoordinates', blockCoordinates);
     // get blocks that are neighboring and of the same color using a utility for starting a round and checking the surroundings of the given block
-    const blocks = startRound(currentBoard, blockCoordinates[0], blockCoordinates[1]);
+    const blocks = checkNeighbors(currentBoard, blockCoordinates[0], blockCoordinates[1]);
     //console.log('blocks', blocks);
     // change values at given coordinates to 0
     if (blocks.length > 0) {

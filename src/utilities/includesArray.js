@@ -1,4 +1,4 @@
-/* export const includesArray = (haystack, needle) => {
+/* const includesArray = (haystack, needle) => {
     for (const index in haystack) {
       if (haystack[index].length === needle.length) {
         for (const value in haystack[index]) {
@@ -12,7 +12,7 @@
     return false;
 } */
 
-export const includesArray = (haystack, needle) => {
+const includesArray = (haystack, needle) => {
   let i, j, current;
   for (i = 0; i < haystack.length; ++i) {
     if (haystack[i].length === needle.length) {
@@ -25,3 +25,5 @@ export const includesArray = (haystack, needle) => {
   }
   return false;
 }
+
+export default includesArray;

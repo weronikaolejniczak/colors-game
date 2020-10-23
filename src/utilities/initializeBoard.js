@@ -1,6 +1,6 @@
 import {BOARD_Y, BOARD_X, COLORS} from '../config';
 
-export const initializeBoard = () => {
+const initializeBoard = () => {
     const board = [];
     // push an empty column onto a board
     for (let i = 0; i < BOARD_Y; i++) {
@@ -13,3 +13,5 @@ export const initializeBoard = () => {
     //console.log(board);
     return board;
 }
+
+export default initializeBoard;
