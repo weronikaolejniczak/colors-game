@@ -1,15 +1,15 @@
 import React from 'react';
 import './style.css';
 
-const Column = ({index, children}) => {
+const Row = ({index, children}) => {
     return (
         <div
-            id={`col-${index}`}
-            className="column"
+            id={`row-${index}`}
+            className="row"
         >
             {children}
         </div>
     );
 }
 
-export default Column;
+export default Row;
