@@ -1,0 +1,2 @@
+export const CLEAR_SCORE = 'CLEAR_SCORE';
+export const INCREASE_SCORE = 'INCREASE_SCORE';
