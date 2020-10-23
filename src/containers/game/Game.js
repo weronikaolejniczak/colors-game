@@ -18,8 +18,7 @@ const Game = (props) => {
         const elementId = event.target.id;
         let coordinates = elementId.split('-').slice(1, 3);
         coordinates = [parseInt(coordinates[0], 10), parseInt(coordinates[1], 10)];
-        //props.updateBoard(board, coordinates);
-        console.log(coordinates);
+        props.updateBoard(board, coordinates);
     }
 
     return (

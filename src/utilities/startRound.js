@@ -2,6 +2,12 @@ import {BOARD_X, BOARD_Y} from '../config';
 import {includesArray} from './includesArray';
 
 const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade) => {
+    console.log('\nNEXT MOVE!')
+    console.log('col and row:', col, row);
+    console.log('value', value);
+    console.log('correctMoves', correctMoves);
+    console.log('movesToMake', movesToMake);
+    console.log('movesMade', movesMade);
     // add the current move to the moves made to avoid repetition
     movesMade.push([col, row]);
     // check block to the top
@@ -48,6 +54,10 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
             movesToMake.push([col - 1, row]);
         }
     }
+    console.log('\nAFTER CHECKING!')
+    console.log('correctMoves', correctMoves);
+    console.log('movesToMake', movesToMake);
+    console.log('movesMade', movesMade);
     // if there are moves to make left...
     if (movesToMake.length > 0) {
         // save coordinates of first move to make next
@@ -55,6 +65,10 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
         const y = movesToMake[0][1];
         // delete the next move to make from the array of moves to make
         movesToMake.shift();
+        console.log('\nBEFORE RECURSION!')
+        console.log('correctMoves', correctMoves);
+        console.log('movesToMake', movesToMake);
+        console.log('movesMade', movesMade);
         // make a recursion
         checkMove(board, x, y, board[x][y], correctMoves, movesToMake, movesMade);
     }
@@ -67,7 +81,7 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
 }
 
 export const startRound = (board, x, y) => {
-    const moves = checkMove(x, y, board[x][y], [[x, y]], [], []);
+    const moves = checkMove(board, x, y, board[x][y], [[x, y]], [], []);
     //console.log('\nROUND SCORE:', moves.length);
     return moves;
 }

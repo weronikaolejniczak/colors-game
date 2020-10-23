@@ -25,9 +25,10 @@ export const updateBoard = (currentBoard, blockCoordinates) => {
     // change values at given coordinates to 0
     // for each column filter out 0's
     // generate values for column.length until the BOARD_Y
+    let board = currentBoard;
 
     return {
         type: UPDATE_BOARD,
-        payload: currentBoard
+        payload: board
     }
 }
