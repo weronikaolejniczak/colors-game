@@ -6,6 +6,7 @@
     height: 50px;
     width: 100%;
     background-color: #111111;
+    color: #dddddd;
 }
 
 .footer .copyright, .footer .repository  {

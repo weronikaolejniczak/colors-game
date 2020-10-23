@@ -7,11 +7,21 @@
     background-color: #111111;
 }
 
-.header .logo {
+.header .logo, .header .quote {
     padding-left: 25px;
     padding-right: 25px;
+}
+
+.header .quote {
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #dddddd;
+}
+
+.header .quote .quotation-mark {
+    padding: 5px;
+    letter-spacing: 2px;
     font-size: 20px;
     font-weight: bold;
-    letter-spacing: -1px;
-    color: #17fff7;
+    color: #685bca;
 }
