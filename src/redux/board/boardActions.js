@@ -1,6 +1,11 @@
 import {SET_BOARD, UPDATE_BOARD} from './boardTypes';
 import {initializeBoard} from '../../utilities/initializeBoard';
 import {startRound} from '../../utilities/startRound';
+import {eraseBlocks} from '../../utilities/eraseBlocks';
+/**
+ * TODO
+ * possibly create an index.js in utilities for better imports
+ */
 
 export const setBoard = () => {
     const board = initializeBoard();
@@ -16,20 +21,29 @@ export const setBoard = () => {
  * complete updateBoard action
  */
 export const updateBoard = (currentBoard, blockCoordinates) => {
-    console.log('currentBoard', currentBoard);
-    console.log('blockCoordinates', blockCoordinates);
-
+    //console.log('currentBoard', currentBoard);
+    //console.log('blockCoordinates', blockCoordinates);
     // get blocks that are neighboring and of the same color using a utility for starting a round and checking the surroundings of the given block
     const blocks = startRound(currentBoard, blockCoordinates[0], blockCoordinates[1]);
-    console.log('blocks', blocks);
-
+    //console.log('blocks', blocks);
     // change values at given coordinates to 0
-    // for each column filter out 0's
-    // generate values for column.length until the BOARD_Y
-    let board = currentBoard;
+    if (blocks.length > 0) {
+        const boardWithoutBlocks = eraseBlocks(currentBoard, blocks);
+        // make a deep copy in accordance with Redux immutability 'law'
+        let board = [];
+        boardWithoutBlocks.forEach(arr => board.push(arr));
 
-    return {
-        type: UPDATE_BOARD,
-        payload: board
+        return {
+            type: UPDATE_BOARD,
+            payload: board
+        }
+    } else {
+        /**
+         * TODO: delegate to an action of board being unchanged to display a message in UI
+         */
+        return {
+            type: UPDATE_BOARD,
+            payload: currentBoard
+        }
     }
 }
