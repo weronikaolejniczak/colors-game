@@ -1,4 +1,5 @@
-import {BOARD_Y, COLORS} from '../config';
+import {BOARD_Y} from '../config';
+import drawValue from './drawValue';
 
 const eraseBlocks = (board, blocks) => {
     //console.log(BOARD);
@@ -28,14 +29,11 @@ const eraseBlocks = (board, blocks) => {
         tempColAsArr = tempColAsArr.filter(elem => elem !== 0);
         //console.log(tempColAsArr); // after filtering
         //console.log(tempColAsArr.length); // length after filtering
-        /**
-         * TODO: refactor in accordance with DRY - same in initializeBoard
-         */
         const elemMissing = BOARD_Y - tempColAsArr.length;
         //console.log(elemMissing); // 2
         const elemToAdd = [];
         for (let i = 0; i < elemMissing; i++) {
-            elemToAdd.push(Math.floor(Math.random() * COLORS + 1));
+            elemToAdd.push(drawValue());
         }
         //console.log(elemToAdd);
         // add numbers to the beginning of each column
