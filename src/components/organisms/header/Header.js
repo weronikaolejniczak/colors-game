@@ -8,12 +8,6 @@ const Header = () => {
             <div className="logo">
                 <Logo width={100} height={50} />
             </div>
-            <span className="quote">
-                <span className="quotation-mark">"</span>
-                    With color one obtains an energy that seems to stem from witchcraft.
-                <span className="quotation-mark">" ~</span>
-                    Henri Matisse
-            </span>
         </header>
     );
 }
