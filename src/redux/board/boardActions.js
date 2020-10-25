@@ -24,18 +24,15 @@ export const updateBoard = (currentBoard, coordinates) => {
             let board = [];
             boardWithoutBlocks.forEach(arr => board.push(arr));
             // update the board with boardWithoutBlocks
-            dispatch({
+            return dispatch({
                 type: UPDATE_BOARD,
                 payload: board
             })
-        } else {
-            /**
-             * TODO: delegate to an action of board being unchanged to display a message in UI
-             */
-            return {
-                type: UPDATE_BOARD,
-                payload: currentBoard
-            }
         }
+
+        return dispatch({
+            type: UPDATE_BOARD,
+            payload: currentBoard
+        })
     }
 }
