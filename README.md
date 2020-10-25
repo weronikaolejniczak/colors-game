@@ -1,12 +1,14 @@
-# Colors Game
+<h1 align="center">Colors Game</h1>
+<img src="src/assets/images/application.png" />
+<h3 align="center"><a href="https://weronikaolejniczak.github.io/colors-game/" target="_blank" rel="noopener noreferrer">Live Demo</a></h3>
+
+---
 
 ## Overview
 
 **Colors Game** is a browser game in which your task is to gain points by destroying neighboring blocks of the same color.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Rules
+### Rules
 
 - You gain points by clicking on the block that is surrounded by blocks of the same color. The block of the same color has to be to the top, bottom, right or left of the clicked block.
 - You gain one point per destroyed block.
