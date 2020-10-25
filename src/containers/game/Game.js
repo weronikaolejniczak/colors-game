@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import Colors from '../../data/Colors';
-import {setBoard, updateBoard, increaseScore} from '../../redux';
-import {checkNeighbors} from '../../utilities/';
+import {setBoard, updateBoard} from '../../redux';
 
 import {ScoreBoard, GameBoard} from '../../components';
 import './style.css';
@@ -17,16 +16,11 @@ const Game = (props) => {
 
     const handleClick = (event) => {
         const elementId = event.target.id;
+        // extract block coordinates from component's ID
         let coordinates = elementId.split('-').slice(1, 3);
         coordinates = [parseInt(coordinates[0], 10), parseInt(coordinates[1], 10)];
-        // get blocks that are neighboring and of the same color using a utility for starting a round and checking the surroundings of the given block
-        const blocks = checkNeighbors(board, coordinates[0], coordinates[1]);
-        // dispatch an action to update board
-        props.updateBoard(board, blocks);
-        if (blocks.length > 0) {
-            // dispatch an action to increase the score
-            props.increaseScore(blocks.length);
-        }
+        // dispatch an action to update board and increase the score accordingly (if at all)
+        props.updateBoard(board, coordinates);
     }
 
     return (
@@ -49,9 +43,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         setBoard: () => dispatch(setBoard()),
-        updateBoard: (currentBoard, blockCoordinates) => dispatch(updateBoard(currentBoard, blockCoordinates)),
-        increaseScore: (num) => dispatch(increaseScore(num))
-
+        updateBoard: (currentBoard, blockCoordinates) => dispatch(updateBoard(currentBoard, blockCoordinates))
     }
 }
 

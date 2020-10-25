@@ -11,7 +11,8 @@ const scoreReducer = (state = initialState, action) => {
             score: 0
         }
 
-        case INCREASE_SCORE: return {
+        case INCREASE_SCORE:
+            return {
             ...state,
             score: state.score + action.payload
         }
