@@ -29,10 +29,5 @@ export const updateBoard = (currentBoard, coordinates) => {
                 payload: board
             })
         }
-
-        return dispatch({
-            type: UPDATE_BOARD,
-            payload: currentBoard
-        })
     }
 }
