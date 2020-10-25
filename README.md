@@ -51,7 +51,7 @@ The state (board, score) is managed with a **Redux** store. A middleware **redux
 
 - **Styling**
 
-The styling approach that I chose for this project is **Sass + BEM** in React. It facilitates project scaling.
+The styling approach that I chose for this project is **CSS-in-JS** in React. It facilitates project scaling.
 
 </br>
 
