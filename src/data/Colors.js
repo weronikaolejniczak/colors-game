@@ -5,7 +5,7 @@ const Colors = {
     4: '#e67fc4',
     5: '#297ef0',
     6: '#ffa311',
-    /* 7: 'ff602f' */
+    7: '#ff602f'
     /* add more colors here */
 }
 

@@ -5,7 +5,7 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
     // add the current move to the moves made to avoid repetition
     movesMade.push([col, row]);
     // check block to the top
-    if (row < BOARD_X - 1 && board[col][row + 1] === value) {
+    if (row < BOARD_Y - 1 && board[col][row + 1] === value) {
         // if block to the top has the correct value and it's not already in correct moves, add it
         if (!includesArray(correctMoves, [col, row + 1])) {
             correctMoves.push([col, row + 1]);
@@ -27,7 +27,7 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
         }
     }
     // check block to the right
-    if (col < BOARD_Y - 1 && board[col + 1][row] === value) {
+    if (col < BOARD_X - 1 && board[col + 1][row] === value) {
         // if block to the right has the correct value and it's not already in correct moves, add it
         if (!includesArray(correctMoves, [col + 1, row])) {
             correctMoves.push([col + 1, row]);
