@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/colors-game/static/css/main.462bbf56.chunk.css",
+    "main.js": "/colors-game/static/js/main.82dc8384.chunk.js",
+    "main.js.map": "/colors-game/static/js/main.82dc8384.chunk.js.map",
+    "runtime-main.js": "/colors-game/static/js/runtime-main.872c81b9.js",
+    "runtime-main.js.map": "/colors-game/static/js/runtime-main.872c81b9.js.map",
+    "static/js/2.ea8a1cb0.chunk.js": "/colors-game/static/js/2.ea8a1cb0.chunk.js",
+    "static/js/2.ea8a1cb0.chunk.js.map": "/colors-game/static/js/2.ea8a1cb0.chunk.js.map",
+    "index.html": "/colors-game/index.html",
+    "precache-manifest.ebd6b15833631fc1b28610d611d7f344.js": "/colors-game/precache-manifest.ebd6b15833631fc1b28610d611d7f344.js",
+    "service-worker.js": "/colors-game/service-worker.js",
+    "static/css/main.462bbf56.chunk.css.map": "/colors-game/static/css/main.462bbf56.chunk.css.map",
+    "static/js/2.ea8a1cb0.chunk.js.LICENSE.txt": "/colors-game/static/js/2.ea8a1cb0.chunk.js.LICENSE.txt",
+    "static/media/logo.6e4480ef.svg": "/colors-game/static/media/logo.6e4480ef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.872c81b9.js",
+    "static/js/2.ea8a1cb0.chunk.js",
+    "static/css/main.462bbf56.chunk.css",
+    "static/js/main.82dc8384.chunk.js"
+  ]
+}
