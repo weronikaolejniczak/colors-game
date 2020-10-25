@@ -4,9 +4,13 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import rootReducer from './rootReducer';
 
-/**
- * TODO: distinguish middleware between production and development
- */
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk, logger)));
+let middleware = [];
+if (process.env.NODE_ENV === 'development') {
+  middleware = [...middleware, thunk, logger];
+} else {
+  middleware = [...middleware, thunk];
+}
+
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middleware)));
 
 export default store;
