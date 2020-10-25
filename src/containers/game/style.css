@@ -5,3 +5,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.game-container__actions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

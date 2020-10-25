@@ -30,7 +30,10 @@ const Game = (props) => {
 
     return (
         <div className="game-container">
-            <Button handleClick={handleRestart} label="Restart" />
+            <div className="game-container__actions">
+                <Button handleClick={() => console.log('stop!')} label="Stop" />
+                <Button handleClick={handleRestart} label="Restart" />
+            </div>
             <ScoreBoard score={score} />
             <GameBoard board={board} colors={colors} handleClick={handleClickOnBlock} />
         </div>
