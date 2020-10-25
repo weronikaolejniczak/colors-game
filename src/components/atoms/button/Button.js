@@ -1,9 +1,15 @@
 import React from 'react';
-import './style.css';
+import {default as styles} from './ButtonStyle.js';
+import {css} from 'aphrodite';
 
 const Button = ({handleClick, label}) => {
     return (
-        <button className="Button" onClick={handleClick}>{label}</button>
+        <button
+            className={css(styles.Button)}
+            onClick={handleClick}
+        >
+            {label}
+        </button>
     );
 }
 

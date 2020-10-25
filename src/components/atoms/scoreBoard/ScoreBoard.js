@@ -1,11 +1,12 @@
 import React from 'react';
-import './style.css';
+import {default as styles} from './ScoreBoardStyle.js';
+import {css} from 'aphrodite';
 
 const ScoreBoard = ({score}) => {
     return (
-        <div className="score-board">
-            <div className="score-board__entry">
-                <span className="score-board__title">Score:</span> <span className="score-board__value">{score}</span>
+        <div className={css(styles.ScoreBoard)}>
+            <div className={css(styles.ScoreBoard__Entry)}>
+                <span className={css(styles.ScoreBoard__Title)}>Score:</span> <span className={css(styles.ScoreBoard__Value)}>{score}</span>
             </div>
         </div>
     );

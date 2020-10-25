@@ -4,7 +4,8 @@ import {setBoard, updateBoard, clearScore} from '../../redux';
 import Colors from '../../data/Colors';
 
 import {Button, ScoreBoard, GameBoard} from '../../components';
-import './style.css';
+import {default as styles} from './GameStyle.js';
+import {css} from 'aphrodite';
 
 const Game = (props) => {
     const {board, score} = props;
@@ -29,8 +30,8 @@ const Game = (props) => {
     }
 
     return (
-        <div className="game-container">
-            <div className="game-container__actions">
+        <div className={css(styles.Game)}>
+            <div className={css(styles.Game__Actions)}>
                 <Button handleClick={handleRestart} label="Restart" />
             </div>
             <ScoreBoard score={score} />

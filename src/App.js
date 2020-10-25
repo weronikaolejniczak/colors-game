@@ -4,13 +4,14 @@ import store from './redux/store';
 
 import Game from './containers';
 import {Header, Footer} from './components';
+import {default as styles} from './AppStyle.js';
+import {css} from 'aphrodite';
 
-import './App.css';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <div className={css(styles.App)}>
         <Header />
         <Game />
         <Footer />

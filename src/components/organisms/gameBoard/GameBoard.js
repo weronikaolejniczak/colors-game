@@ -1,10 +1,11 @@
 import React from 'react';
 import {Block, Column} from '../../';
-import './style.css';
+import {default as styles} from './GameBoardStyle.js';
+import {css} from 'aphrodite';
 
 const GameBoard = ({board, colors, handleClick}) => {
     return (
-        <div className="game-board">
+        <div className={css(styles.GameBoard)}>
             {board && board.map((column, index) => (
                 <Column
                     key={`col-${index}`}
