@@ -31,7 +31,6 @@ const Game = (props) => {
     return (
         <div className="game-container">
             <div className="game-container__actions">
-                <Button handleClick={() => console.log('stop!')} label="Stop" />
                 <Button handleClick={handleRestart} label="Restart" />
             </div>
             <ScoreBoard score={score} />

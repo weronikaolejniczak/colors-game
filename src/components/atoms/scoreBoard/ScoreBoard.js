@@ -7,12 +7,6 @@ const ScoreBoard = ({score}) => {
             <div className="score-board__entry">
                 <span className="score-board__title">Score:</span> <span className="score-board__value">{score}</span>
             </div>
-            <div className="score-board__entry">
-                <span className="score-board__title">Time passed:</span> <span className="score-board__value">0s</span>
-            </div>
-            <div className="score-board__entry">
-                <span className="score-board__title">Score per s:</span> <span className="score-board__value">0s</span>
-            </div>
         </div>
     );
 }
