@@ -1,7 +1,7 @@
 .block {
   border: #333 1px dotted;
-  width: 5vh;
-  height: 5vh;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
   transition: ease-in-out 0.25s;
 }
@@ -12,7 +12,7 @@
 
 @media only screen and (max-width: 625px) {
   .block {
-    width: 7vw;
-    height: 7vw;
+    width: 5vw;
+    height: 5vw;
   }
 }
