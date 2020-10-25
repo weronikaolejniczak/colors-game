@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
-import {setBoard, updateBoard} from '../../redux';
+import {setBoard, updateBoard, clearScore} from '../../redux';
 import Colors from '../../data/Colors';
 
-import {ScoreBoard, GameBoard} from '../../components';
+import {Button, ScoreBoard, GameBoard} from '../../components';
 import './style.css';
 
 const Game = (props) => {
@@ -14,7 +14,12 @@ const Game = (props) => {
         props.setBoard();
     }, []);
 
-    const handleClick = (event) => {
+    const handleRestart = () => {
+        props.setBoard();
+        props.clearScore();
+    }
+
+    const handleClickOnBlock = (event) => {
         const elementId = event.target.id;
         // extract block coordinates from component's ID
         let coordinates = elementId.split('-').slice(1, 3);
@@ -25,8 +30,9 @@ const Game = (props) => {
 
     return (
         <div className="game-container">
+            <Button handleClick={handleRestart} label="Restart" />
             <ScoreBoard score={score} />
-            <GameBoard board={board} colors={colors} handleClick={handleClick} />
+            <GameBoard board={board} colors={colors} handleClick={handleClickOnBlock} />
         </div>
     );
 }
@@ -43,7 +49,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         setBoard: () => dispatch(setBoard()),
-        updateBoard: (currentBoard, blockCoordinates) => dispatch(updateBoard(currentBoard, blockCoordinates))
+        updateBoard: (currentBoard, blockCoordinates) => dispatch(updateBoard(currentBoard, blockCoordinates)),
+        clearScore: () => dispatch(clearScore())
     }
 }
 
