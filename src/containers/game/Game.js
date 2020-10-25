@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
-import Colors from '../../data/Colors';
 import {setBoard, updateBoard} from '../../redux';
+import Colors from '../../data/Colors';
 
 import {ScoreBoard, GameBoard} from '../../components';
 import './style.css';
