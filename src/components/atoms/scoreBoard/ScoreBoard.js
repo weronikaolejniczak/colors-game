@@ -4,7 +4,12 @@ import './style.css';
 const ScoreBoard = ({score}) => {
     return (
         <div className="score-board">
-            <span className="score-title">Score:</span> <span className="score-value">{score}</span>
+            <div className="score-board__entry">
+                <span className="score-board__title">Score:</span> <span className="score-board__value">{score}</span>
+            </div>
+            <div className="score-board__entry">
+                <span className="score-board__title">Time passed:</span> <span className="score-board__value">0s</span>
+            </div>
         </div>
     );
 }

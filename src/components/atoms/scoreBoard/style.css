@@ -1,13 +1,19 @@
 .score-board {
+    display: flex;
     padding-left: 25px;
     padding-right: 25px;
     font-size: 20px;
 }
 
-.score-board .score-title {
+.score-board__entry {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.score-board__title {
     font-weight: bold;
 }
 
-.score-board .score-value {
+.score-board__value {
     margin-left: 10px;
 }
