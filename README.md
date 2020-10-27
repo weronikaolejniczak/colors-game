@@ -29,11 +29,11 @@ The project was developed as a solution to recruitment task.
 
 - **Constructing board**
 
-The board is in fact a two-dimensional array, *"array of arrays"*. Each array is a column and each element of that array is a value from 1 to the number of colors.
+The board is in fact a two-dimensional array, *"array of arrays"*. Each array is a column and each element of that array has a value from 1 to the number of colors.
 
 - **Block neighborhood check**
 
-An especially interesting problem was writing a function to check if for a given block the surrounding blocks are of the same color. This is quite straightforward but the interesting part is where some neighboring block is indeed of the same color and you now have to check *its* neighborhood, and repeat the process for each of the same-colored blocks in close proximity to one another.
+An especially interesting problem was writing a function to check if for a given block the surrounding blocks are of the same color. This is quite straightforward but the interesting part is where some neighboring block is indeed of the same color and you now have to check *its* neighborhood, and repeat the process for each of the same-colored blocks in close proximity to one another. You'd also have to ignore the blocks that have been already examined.
 
 What immediately comes to mind is a **recursion** function. Such a function was implemented in a form of a utility and each time the player clicks on some block, the utility is used. It returns the coordinates [x, y] in the form of an array if there are at least 2 same-colored blocks in the close proximity (one of them is the one chosen by the user). If the block that the player chose is in fact a "lonely" block (i. e. it does not have same-colored blocks in its neighborhood) the function returns an empty array.
 
@@ -57,6 +57,7 @@ The styling approach that I chose for this project is **CSS-in-JS** in React wit
 
 ### Future scope
 
+- Refactoring to minimize repetitions especially in the styling layer, i. e. putting colors and metrics in seperate files in, for example, "constants" folder.
 - **Board examiner function.** Such an examiner would check if there are available moves on the board. If not, an appropriate message would be displayed on the board.
 - Display a message on the board if the user clicks on the block which does not have same-colored neighbors.
 - Let user choose the dimensions of the board.
