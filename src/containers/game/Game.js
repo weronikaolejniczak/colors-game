@@ -10,15 +10,16 @@ import {css} from 'aphrodite';
 
 const Game = (props) => {
     const {board, score} = props;
+    const {setBoard, clearScore, prepareBoard} = props;
     const colors = Colors;
 
     useEffect(() => {
-        props.setBoard();
+        setBoard();
     }, []);
 
     const handleRestart = () => {
-        props.setBoard();
-        props.clearScore();
+        setBoard();
+        clearScore();
     }
 
     const handleClickOnBlock = (event) => {
@@ -27,7 +28,7 @@ const Game = (props) => {
         let coordinates = elementId.split('-').slice(1, 3);
         coordinates = [parseInt(coordinates[0], 10), parseInt(coordinates[1], 10)];
 
-        props.prepareBoard(board, coordinates);
+        prepareBoard(board, coordinates);
     }
 
     return (
