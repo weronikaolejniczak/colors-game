@@ -1,9 +1,9 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import store from './redux/store';
+import store from './state/store';
 
-import Game from './containers';
-import {Header, Footer} from './components';
+import Game from 'containers';
+import {Header, Footer} from 'components/organisms';
 import {default as styles} from './AppStyle.js';
 import {css} from 'aphrodite';
 

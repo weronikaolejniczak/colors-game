@@ -1,25 +1,25 @@
 import React from 'react';
-import {Link} from '../../';
+
+import {Link} from 'components/atoms';
 import {default as styles} from './FooterStyle.js';
 import {css} from 'aphrodite';
 
 const Footer = () => {
     return (
         <footer className={css(styles.Footer)}>
-            {/* Author section */}
             <span className={css(styles.Footer_Section)}>
                 Made by <Link
-                    href={"https://github.com/weronikaolejniczak"}
-                    alt={"Weronika Olejniczak GitHub account"}
-                    label={"Weronika Olejniczak"}
+                    href="https://github.com/weronikaolejniczak"
+                    alt="Weronika Olejniczak GitHub account"
+                    label="Weronika Olejniczak"
                 />
             </span>
-            {/* Repository section */}
+
             <span className={css(styles.Footer_Section)}>
-                GitHub repository <Link
-                    href={"https://github.com/weronikaolejniczak/colors-game"}
-                    alt={"Colors Game repository at GitHub"}
-                    label={"@weronikaolejniczak/colors-game"}
+                GitHub repo <Link
+                    href="https://github.com/weronikaolejniczak/colors-game"
+                    alt="Colors Game repository at GitHub"
+                    label="@colors-game"
                 />
             </span>
         </footer>

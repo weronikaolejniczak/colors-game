@@ -1,5 +1,5 @@
-import {BOARD_X, BOARD_Y} from '../config';
-import includesArray from './includesArray';
+import {BOARD_X, BOARD_Y} from 'config';
+import includesArray from 'utilities/includesArray';
 
 const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade) => {
     movesMade.push([col, row]);

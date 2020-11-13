@@ -1,5 +1,5 @@
-import {BOARD_Y} from '../config';
-import drawValue from './drawValue';
+import {BOARD_Y} from 'config';
+import drawValue from 'utilities/drawValue';
 
 const eraseBlocks = (board, blocks) => {
     for (const block in blocks) {

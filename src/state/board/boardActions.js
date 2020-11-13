@@ -1,6 +1,6 @@
 import {SET_BOARD, UPDATE_BOARD} from './boardTypes';
-import {initializeBoard, checkNeighbors, eraseBlocks} from '../../utilities/';
-import {increaseScore} from '../';
+import {initializeBoard, checkNeighbors, eraseBlocks} from '../../utilities';
+import {increaseScore} from '..';
 
 export const setBoard = () => {
     const board = initializeBoard();

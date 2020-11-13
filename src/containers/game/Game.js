@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
-import {setBoard, updateBoard, clearScore} from '../../redux';
-import Colors from '../../data/Colors';
 
-import {Button, ScoreBoard, GameBoard} from '../../components';
+import {setBoard, updateBoard, clearScore} from 'state';
+import Colors from 'data/Colors';
+import {Button, ScoreBoard} from 'components/atoms';
+import {GameBoard} from 'components/organisms';
 import {default as styles} from './GameStyle.js';
 import {css} from 'aphrodite';
 

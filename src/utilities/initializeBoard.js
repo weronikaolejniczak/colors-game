@@ -1,5 +1,5 @@
-import {BOARD_X, BOARD_Y} from '../config';
-import drawValue from './drawValue';
+import {BOARD_X, BOARD_Y} from 'config';
+import drawValue from 'utilities/drawValue';
 
 const initializeBoard = () => {
     const board = [];
