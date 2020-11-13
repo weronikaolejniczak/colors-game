@@ -54,9 +54,6 @@ const checkMove = (board, col, row, value, correctMoves, movesToMake, movesMade)
     }
 }
 
-const checkNeighbors = (board, x, y) => {
-    const moves = checkMove(board, x, y, board[x][y], [[x, y]], [], []);
-    return moves;
-}
+const checkNeighbors = (board, x, y) => checkMove(board, x, y, board[x][y], [[x, y]], [], []);
 
 export default checkNeighbors;
