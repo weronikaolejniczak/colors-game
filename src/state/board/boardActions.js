@@ -1,17 +1,17 @@
 import {SET_BOARD, UPDATE_BOARD} from './boardTypes';
-import {initializeBoard, checkNeighbors, eraseBlocks} from '../../utilities';
-import {increaseScore} from '..';
+import {checkNeighbors, eraseBlocks} from 'utilities';
+import {increaseScore} from 'state';
 
-export const setBoard = () => {
-    const board = initializeBoard();
+export const setBoard = () => ({
+    type: SET_BOARD
+});
 
-    return {
-        type: SET_BOARD,
-        payload: board
-    }
-}
+export const updateBoard = (board) => ({
+    type: UPDATE_BOARD,
+    payload: board
+})
 
-export const updateBoard = (currentBoard, coordinates) => {
+export const prepareBoard = (currentBoard, coordinates) => {
     return (dispatch) => {
         const blocks = checkNeighbors(currentBoard, coordinates[0], coordinates[1]);
 
@@ -19,13 +19,11 @@ export const updateBoard = (currentBoard, coordinates) => {
             dispatch(increaseScore(blocks.length));
 
             const boardWithoutBlocks = eraseBlocks(currentBoard, blocks);
-            let board = [];
-            boardWithoutBlocks.forEach(arr => board.push(arr));
 
-            return dispatch({
-                type: UPDATE_BOARD,
-                payload: board
-            })
+            let updatedBoard = [];
+            boardWithoutBlocks.forEach(arr => updatedBoard.push(arr));
+
+            dispatch(updateBoard(updatedBoard));
         }
     }
 }

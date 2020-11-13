@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
-import {setBoard, updateBoard, clearScore} from 'state';
+import {setBoard, prepareBoard, clearScore} from 'state';
 import Colors from 'data/Colors';
 import {Button, ScoreBoard} from 'components/atoms';
 import {GameBoard} from 'components/organisms';
@@ -27,7 +27,7 @@ const Game = (props) => {
         let coordinates = elementId.split('-').slice(1, 3);
         coordinates = [parseInt(coordinates[0], 10), parseInt(coordinates[1], 10)];
 
-        props.updateBoard(board, coordinates);
+        props.prepareBoard(board, coordinates);
     }
 
     return (
@@ -48,7 +48,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
     setBoard,
-    updateBoard,
+    prepareBoard,
     clearScore
 }
 
