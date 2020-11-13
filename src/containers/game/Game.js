@@ -41,19 +41,15 @@ const Game = (props) => {
     );
 }
 
-const mapStateToProps = state => {
-    return {
-        board: state.board.board,
-        score: state.score.score
-    }
-}
+const mapStateToProps = state => ({
+    board: state.board.board,
+    score: state.score.score
+});
 
-const mapDispatchToProps = dispatch => {
-    return {
-        setBoard: () => dispatch(setBoard()),
-        updateBoard: (currentBoard, blockCoordinates) => dispatch(updateBoard(currentBoard, blockCoordinates)),
-        clearScore: () => dispatch(clearScore())
-    }
+const mapDispatchToProps = {
+    setBoard,
+    updateBoard,
+    clearScore
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Game);
