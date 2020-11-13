@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,EACE,QAAS,CACT,SACF,CAEA,KACE,0CAA6C,CAC7C,kCAAmC,CACnC,iCACF","file":"main.05ead6fc.chunk.css","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: \"Lato\", \"Montserrat\", sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n"]}
