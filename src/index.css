@@ -1,7 +1,9 @@
-body {
-  /* reset margin */
+* {
   margin: 0;
-  /* font family and font enhance */
+  padding: 0;
+}
+
+body {
   font-family: "Lato", "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
