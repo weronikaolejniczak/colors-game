@@ -8,7 +8,7 @@ const Block = ({parentId, index, cell, colors, handleClick}) => {
             id={`block-${parentId}-${index}`}
             className={css(styles.Block)}
             style={{backgroundColor: `${colors[cell]}`}}
-            onClick={(event) => handleClick(event)}
+            onClick={handleClick}
         />
     );
 }
