@@ -64,11 +64,6 @@ The styling approach that I chose for this project is **CSS-in-JS** in React wit
 
 You’ll need to have **Node >= 10** on your local development machine.
 
-- React
-- Redux and React-Redux
-- redux-thunk
-- aphrodite
-
 ### How to run the project in development mode
 
 First, you have to install the dependencies. You can do that by going to the root folder of the project and typing:
