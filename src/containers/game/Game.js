@@ -22,10 +22,10 @@ const Game = (props) => {
 
     const handleClickOnBlock = (event) => {
         const elementId = event.target.id;
-        // extract block coordinates from component's ID
+
         let coordinates = elementId.split('-').slice(1, 3);
         coordinates = [parseInt(coordinates[0], 10), parseInt(coordinates[1], 10)];
-        // dispatch an action to update board and increase the score accordingly (if at all)
+
         props.updateBoard(board, coordinates);
     }
 
@@ -40,7 +40,6 @@ const Game = (props) => {
     );
 }
 
-/* access Redux state in React component; receives state as a parameter */
 const mapStateToProps = state => {
     return {
         board: state.board.board,
@@ -48,7 +47,6 @@ const mapStateToProps = state => {
     }
 }
 
-/* access dispatch method to dispatch an action to Redux store from React component */
 const mapDispatchToProps = dispatch => {
     return {
         setBoard: () => dispatch(setBoard()),
