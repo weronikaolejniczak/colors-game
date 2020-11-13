@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
 import {setBoard, prepareBoard, clearScore} from 'state';
-import Colors from 'data/Colors';
+import BlockColors from 'data/BlockColors';
 import {Button, ScoreBoard} from 'components/atoms';
 import {GameBoard} from 'components/organisms';
 import {default as styles} from './GameStyle.js';
@@ -11,7 +11,7 @@ import {css} from 'aphrodite';
 const Game = (props) => {
     const {board, score} = props;
     const {setBoard, clearScore, prepareBoard} = props;
-    const colors = Colors;
+    const colors = BlockColors;
 
     useEffect(() => {
         setBoard();
