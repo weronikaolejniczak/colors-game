@@ -1,8 +1,8 @@
 import React from 'react';
+import {css} from 'aphrodite';
 
 import {Link} from 'components/atoms';
 import {default as styles} from './FooterStyle.js';
-import {css} from 'aphrodite';
 
 const Footer = () => {
     return (

@@ -1,6 +1,7 @@
 import React from 'react';
-import {default as styles} from './LinkStyle.js';
 import {css} from 'aphrodite';
+
+import {default as styles} from './LinkStyle.js';
 
 const Link = ({href, alt, label}) => {
     return (

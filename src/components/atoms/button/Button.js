@@ -1,7 +1,7 @@
 import React from 'react';
+import {css} from 'aphrodite';
 
 import {default as styles} from './ButtonStyle.js';
-import {css} from 'aphrodite';
 
 const Button = ({handleClick, label}) => {
     return (

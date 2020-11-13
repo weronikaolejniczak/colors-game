@@ -1,6 +1,7 @@
 import React from 'react';
-import {default as styles} from './ColumnStyle.js';
 import {css} from 'aphrodite';
+
+import {default as styles} from './ColumnStyle.js';
 
 const Column = ({index, children}) => {
     return (

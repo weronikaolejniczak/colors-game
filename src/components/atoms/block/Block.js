@@ -1,6 +1,7 @@
 import React from 'react';
-import {default as styles} from './BlockStyle.js';
 import {css} from 'aphrodite';
+
+import {default as styles} from './BlockStyle.js';
 
 const Block = ({parentId, index, cell, colors, handleClick}) => {
     return (

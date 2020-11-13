@@ -1,6 +1,7 @@
 import React from 'react';
-import {default as styles} from './ScoreBoardStyle.js';
 import {css} from 'aphrodite';
+
+import {default as styles} from './ScoreBoardStyle.js';
 
 const ScoreBoard = ({score}) => {
     return (

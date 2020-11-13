@@ -1,7 +1,8 @@
 import React from 'react';
-import {ReactComponent as Logo} from '../../../assets/images/logo.svg';
-import {default as styles} from './HeaderStyle.js';
 import {css} from 'aphrodite';
+
+import {ReactComponent as Logo} from 'assets/images/logo.svg';
+import {default as styles} from './HeaderStyle.js';
 
 const Header = () => {
     return (
