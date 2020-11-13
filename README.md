@@ -23,6 +23,8 @@
 
 The project was developed as a solution to recruitment task.
 
+You can change the dimensions of the board in the *src/config.js* file. You can add colors in *src/data/Colors.js* file: the key should be the **next integer** and the value should be a **string of color** in some format (hex, rgb, rgba).
+
 </br>
 
 ### Problems solved
@@ -57,6 +59,7 @@ The styling approach that I chose for this project is **CSS-in-JS** in React wit
 
 ### Future scope
 
+- More responsive layout.
 - Refactoring to minimize repetitions especially in the styling layer, i. e. putting colors and metrics in seperate files in, for example, "constants" folder.
 - **Board examiner function.** Such an examiner would check if there are available moves on the board. If not, an appropriate message would be displayed on the board.
 - Display a message on the board if the user clicks on the block which does not have same-colored neighbors.
@@ -68,11 +71,11 @@ The styling approach that I chose for this project is **CSS-in-JS** in React wit
 
 ### Requirements
 
-**You’ll need to have Node >= 10 on your local development machine**.
+You’ll need to have **Node >= 10** on your local development machine.
 
-- **React**
-- **Redux** and **React-Redux**
-- **redux-thunk** - for action creators with side-effects
+- React
+- Redux and React-Redux
+- redux-thunk
 - aphrodite
 
 
