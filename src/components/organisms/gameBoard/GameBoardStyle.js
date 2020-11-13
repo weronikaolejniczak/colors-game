@@ -1,9 +1,11 @@
 import {StyleSheet} from 'aphrodite';
 
+import Colors from 'constants/Colors';
+
 const GameBoardStyle = StyleSheet.create({
     GameBoard: {
         padding: 10,
-        border: '#ddd solid 2px',
+        border: `${Colors.lightGrey} solid 2px`,
         borderRadius: 10,
         display: 'flex'
     }

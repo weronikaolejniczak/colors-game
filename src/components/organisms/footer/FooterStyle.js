@@ -1,5 +1,7 @@
 import {StyleSheet} from 'aphrodite';
 
+import Colors from 'constants/Colors';
+
 const FooterStyle = StyleSheet.create({
     Footer: {
         position: 'absolute',
@@ -8,8 +10,8 @@ const FooterStyle = StyleSheet.create({
         alignItems: 'center',
         height: 50,
         width: '100%',
-        backgroundColor: '#111111',
-        color: '#dddddd',
+        backgroundColor: Colors.darkGrey,
+        color: Colors.lightGrey,
     },
     Footer_Section: {
         paddingLeft: 50,

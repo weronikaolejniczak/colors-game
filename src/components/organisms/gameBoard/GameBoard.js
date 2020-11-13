@@ -1,9 +1,9 @@
 import React from 'react';
+import {css} from 'aphrodite';
 
 import {Block} from 'components/atoms';
 import {Column} from 'components/molecules';
 import {default as styles} from './GameBoardStyle.js';
-import {css} from 'aphrodite';
 
 const GameBoard = ({board, colors, handleClick}) => {
     return (

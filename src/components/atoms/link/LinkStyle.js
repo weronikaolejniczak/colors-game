@@ -1,13 +1,15 @@
 import {StyleSheet} from 'aphrodite';
 
+import Colors from 'constants/Colors';
+
 const LinkStyle = StyleSheet.create({
     Link: {
-        color: '#685bca',
+        color: Colors.purple,
         textDecoration: 'none',
         fontWeight: 'bold',
         transition: 'ease-in-out 0.3s',
         ':hover': {
-            color: '#8b81d7'
+            color: Colors.lightPurple
         }
     }
 })
