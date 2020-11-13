@@ -1,4 +1,4 @@
-import Colors from './data/Colors';
+import Colors from 'data/Colors';
 
 /* change the dimensions of the board here */
 export const BOARD_X = 22;
