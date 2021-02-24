@@ -1,6 +1,6 @@
-<h1 align="center">A fun browser game - Colors Game</h1>
+<h1 align="center">A fun browser game - Colors!</h1>
 <img src="src/assets/images/application.png" />
-<h3 align="center"><a href="https://weronikaolejniczak.github.io/colors-game/" target="_blank" rel="noopener noreferrer">Live Demo</a></h3>
+<h3 align="center"><a href="https://weronikaolejniczak.github.io/colors-game/" target="_blank" rel="noopener noreferrer">Demo</a></h3>
 
 ---
 
